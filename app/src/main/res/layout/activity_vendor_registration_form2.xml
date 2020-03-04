@@ -26,6 +26,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@color/hintColor"
+                android:inputType="number"
                 android:hint="SSN"
                 android:padding="10dp"></EditText>
 
@@ -37,6 +38,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@color/hintColor"
+                android:inputType="number"
                 android:hint="Hourly Rate"
                 android:padding="10dp"></EditText>
 
@@ -225,8 +227,11 @@
                 android:text="@string/already_registered"></TextView>
 
             <TextView
+                android:id="@+id/txt_login_here"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:clickable="true"
                 android:text="@string/login_here"></TextView>
 
         </LinearLayout>

@@ -42,6 +42,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -53,6 +54,7 @@
                 android:padding="20dp"></EditText>
 
             <EditText
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -72,6 +74,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/buttonColor"
@@ -117,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/register_here"
+                android:textColor="#3F51B5"
                 android:onClick="onClick"
                 android:clickable="true"></TextView>
 

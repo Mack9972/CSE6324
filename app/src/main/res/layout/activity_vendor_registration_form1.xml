@@ -170,16 +170,19 @@
                 android:hint="Gender"></EditText>-->
 
             <RadioGroup
+                android:id="@+id/radio_grp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal">
                 <RadioButton
+                    android:id="@+id/radio_male"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Male"></RadioButton>
                 <RadioButton
+                    android:id="@+id/radio_female"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

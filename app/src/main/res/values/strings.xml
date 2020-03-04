@@ -7,4 +7,24 @@
     <string name="login_here">Login Here...</string>
     <string name="vendor_login">Vendor Login</string>
     <string name="vendor_registration">Vendor Registration</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="remember_me">Remember Me</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="homepage_uneedvhelp">HomePage - uNeedVHelp</string>
+    <string name="customer_login">CUSTOMER LOGIN</string>
+    <string name="new_user_registration">New User? Sign Up Here</string>
+    <string name="already_registered_login_here">Already Registered ? Login Here</string>
+    <string name="customer_registration_label">Customer Registration</string>
+    <string name="CUSTOMER_REGISTRATION" />
+    <string name="select_date">Select Date</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="customer_registration">CUSTOMER REGISTRATION</string>
+    <string name="gender">Gender</string>
 </resources>

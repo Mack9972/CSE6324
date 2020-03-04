@@ -12,6 +12,9 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,10 +35,11 @@ public class VendorRegistrationForm1Activity extends AppCompatActivity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
 
-    EditText fname, lname, email, phone, password, confirm_password, address, dob,gender,zip,state,city;
+    EditText fname, lname, email, phone, password, confirm_password, address, dob,zip,state,city;
     DatePickerDialog dt_dob;
     private SimpleDateFormat dateFormatter;
     Button btnNext;
+    RadioGroup radiogrp;
     
 
     @Override
@@ -60,6 +64,7 @@ public class VendorRegistrationForm1Activity extends AppCompatActivity {
         state=(EditText) findViewById(R.id.edt_state);
         city=(EditText) findViewById(R.id.edt_city);
         address=(EditText) findViewById(R.id.edt_address);
+        radiogrp= findViewById(R.id.radio_grp);
 
         /*gender= findViewById(R.id.edt_gender);
         gender.setInputType(InputType.TYPE_NULL);
@@ -187,7 +192,7 @@ public class VendorRegistrationForm1Activity extends AppCompatActivity {
                 }
                 else{
                     mBool=checkMobile(mobileValue);
-                    Log.w("MainActivity:Mobile",mobileValue);
+                    //Log.w(":Mobile",mobileValue);
                     if(mBool==false){
                         phone.setError("Please type a 10 digit phone number");
                     }
@@ -231,8 +236,16 @@ public class VendorRegistrationForm1Activity extends AppCompatActivity {
                 String conf_pwd = confirm_password.getText().toString();
                 String dt_birth = dob.getText().toString();
                 String mobile = phone.getText().toString();*/
+
+
+
                 if(fBool&&lBool&&eBool&&pBool&&mBool&&aBool&&zBool&&sBool&&cBool) {
                     Intent intent = new Intent(VendorRegistrationForm1Activity.this, VendorRegistrationForm2Activity.class);
+
+                    int radioID = radiogrp.getCheckedRadioButtonId();
+                    RadioButton radio_btn= findViewById(radioID);
+                    String str_radio = radio_btn.getText().toString();
+
                     intent.putExtra("fname", fValue);
                     intent.putExtra("lname", lValue);
                     intent.putExtra("email", eValue);
@@ -243,6 +256,8 @@ public class VendorRegistrationForm1Activity extends AppCompatActivity {
                     intent.putExtra("state",stateValue);
                     intent.putExtra("city",cityValue);
                     intent.putExtra("dob",getStringValue(dob));
+                    intent.putExtra("gender",str_radio);
+
                     startActivity(intent);
                 }
                 else{
